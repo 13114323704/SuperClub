@@ -1,0 +1,46 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="menu_labels_style">
+        <item name="android:background">@drawable/fab_label_bg</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="MyTabLayoutTextAppearance" >
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="dialogTheme" parent="android:Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 该属性去掉dialog 背景  如果设置圆角 就会去掉圆角阴影 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="enter_from_bottom">
+        <item name="@android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="@android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+
+    <style name="fade_in_out">
+        <item name="@android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="@android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <style name="popup_enter_style" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/popup_enter</item>
+        <item name="@android:windowExitAnimation">@anim/popup_exit</item>
+    </style>
+</resources>

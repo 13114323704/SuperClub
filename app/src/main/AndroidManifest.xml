@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.competition.superclub">
+
+    <!-- 百度API所需权限 -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 允许应用读取低级别的系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- 相机 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 振动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".UI.LoginActivity" />
+        <activity android:name=".UI.RegisterActivity" />
+        <activity android:name=".UI.HomeActivity" />
+        <activity android:name=".UI.ClubHomepageActivity" />
+        <activity android:name=".UI.DynamicInfoActivity" />
+        <activity android:name=".UI.RecruitActivity" />
+        <activity android:name=".UI.HonorActivity" />
+        <activity android:name=".UI.TrackActivity" />
+        <activity android:name=".UI.SearchMapActivity" />
+        <activity android:name=".UI.RankActivity" />
+        <activity android:name=".UI.FavourActivity" />
+        <activity android:name=".UI.AttentionActivity" />
+        <activity android:name=".UI.ReadActivity" />
+        <activity android:name=".UI.MineHonorActivity" />
+        <activity android:name=".UI.MineEvaluateActivity" />
+        <activity android:name=".UI.MineTrackActivity" />
+        <activity android:name=".UI.AboutActivity" />
+        <activity android:name=".UI.ClubRegisterActivity" />
+        <activity android:name=".UI.ClubHomepageTestActivity"/>
+        <activity android:name=".UI.ClubManageActivity"/>
+        <activity android:name=".UI.InfoModifyActivity"/>
+        <activity android:name=".UI.MemberManageActivity"/>
+        <activity android:name=".UI.ClubHonorActivity"/>
+        <activity android:name=".UI.ClubTrackActivity"/>
+        <activity android:name=".UI.ClubFellowshipActivity"/>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="UgQbtnteHHTO3GSbPC7u9CkKSo0jC80G" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote"></service>
+    </application>
+
+</manifest>

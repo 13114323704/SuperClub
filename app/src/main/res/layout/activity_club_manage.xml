@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/top_layout"
+        layout="@layout/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_layout">
+
+        <RelativeLayout
+            android:id="@+id/club_info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/imageview_club_icon"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:padding="5dp"
+                android:src="@mipmap/icon_android_club" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/imageview_club_qrcode"
+                android:layout_toRightOf="@+id/imageview_club_icon"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="发现杯俱乐部"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/textview_level_bg"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="LV5"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/icon_member_number" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="121人"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="#bbbbbb"
+                        android:padding="8dp" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/icon_active" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="刚刚活跃"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageview_club_qrcode"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_club_qrcode" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/info_manager_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/club_info_layout"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/imageview_info_label"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:layout_alignParentLeft="true"
+                android:src="@mipmap/icon_item_info" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageview_info_label"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:text="资料修改" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/icon_arrows_right" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/member_manager_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/info_manager_layout"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/imageview_member_label"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:layout_alignParentLeft="true"
+                android:src="@mipmap/icon_item_member" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageview_member_label"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:text="成员管理" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/icon_arrows_right" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/honor_manager_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/member_manager_layout"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/imageview_honor_label"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:layout_alignParentLeft="true"
+                android:src="@mipmap/icon_item_honor" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageview_honor_label"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:text="荣誉记录" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/icon_arrows_right" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/track_manager_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/honor_manager_layout"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/imageview_track_label"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:layout_alignParentLeft="true"
+                android:src="@mipmap/icon_item_track" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageview_track_label"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:text="出游记录" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/icon_arrows_right" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fellowship_manage_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/track_manager_layout"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/imageview_fellowship_label"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:layout_alignParentLeft="true"
+                android:src="@mipmap/icon_item_fellowship" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageview_fellowship_label"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:text="联谊社团" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/icon_arrows_right" />
+        </RelativeLayout>
+
+        <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:id="@+id/multiple_actions_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            app:fab_addButtonColorNormal="@android:color/holo_blue_light"
+            app:fab_addButtonColorPressed="@android:color/holo_blue_light"
+            app:fab_addButtonPlusIconColor="@android:color/holo_red_light"
+            app:fab_addButtonSize="normal"
+            app:fab_expandDirection="up"
+            app:fab_labelStyle="@style/menu_labels_style">
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/float_button_member"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_icon="@mipmap/icon_fb_member"
+                app:fab_colorNormal="@android:color/holo_blue_light"
+                app:fab_colorPressed="@android:color/holo_blue_light"
+                app:fab_title="发布招新信息" />
+
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/float_button_honor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_icon="@mipmap/icon_fb_honor"
+                app:fab_colorNormal="@android:color/holo_blue_light"
+                app:fab_colorPressed="@android:color/holo_blue_light"
+                app:fab_title="发布荣誉信息" />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/float_button_track"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_icon="@mipmap/icon_fb_track"
+                app:fab_colorNormal="@android:color/holo_blue_light"
+                app:fab_colorPressed="@android:color/holo_blue_light"
+                app:fab_title="发布出游信息" />
+
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/float_button_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_icon="@mipmap/icon_other"
+                app:fab_colorNormal="@android:color/holo_blue_light"
+                app:fab_colorPressed="@android:color/holo_blue_light"
+                app:fab_title="发布其它信息" />
+        </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.competition.superclub.CustomView.MyScrollView
+        android:id="@+id/myScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="beforeDescendants"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@mipmap/club_top_bg">
+
+                <RelativeLayout
+                    android:id="@+id/relative_top_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true">
+
+                    <ImageView
+                        android:id="@+id/imageview_back"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:padding="7dp"
+                        android:src="@mipmap/icon_arrow_left_white" />
+
+                    <ImageView
+                        android:id="@+id/imageview_function"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:padding="10dp"
+                        android:src="@mipmap/icon_more_white" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/image_club"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/relative_top_search"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/icon_example_club" />
+
+                <TextView
+                    android:id="@+id/textview_clubname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/image_club"
+                    android:layout_centerHorizontal="true"
+                    android:text="发现杯俱乐部"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textview_detailinfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textview_clubname"
+                    android:layout_centerHorizontal="true"
+                    android:text="关注 1024  |  成员 240"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/center_container_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#ffffff">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:tabBackground="@drawable/tab_textview_bg"
+                    app:tabIndicatorColor="@color/themeColor"
+                    app:tabMinWidth="80dp"
+                    app:tabMode="fixed"
+                    app:tabSelectedTextColor="@color/themeColor"
+                    app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+                    app:tabTextColor="@android:color/black" />
+
+            </RelativeLayout>
+
+            <com.competition.superclub.CustomView.AutofitViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </com.competition.superclub.CustomView.MyScrollView>
+
+    <RelativeLayout
+        android:id="@+id/top_container_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+    </RelativeLayout>
+</RelativeLayout>
